@@ -1,6 +1,12 @@
 /*
 Display important information in a container that will catch the user's attention
 
+Markup:
+<div class="alert $modifierClass">
+    <h1 class="alert__title">Title of Alert</h1>
+    Body of Alert
+</div>
+
 .alert--error - Use when a user does something dumb
 .alert--success - Use when a user does something right
 .alert--info - Use to give extra info to a user
@@ -35,4 +41,11 @@ Styleguide 1.1
 .alert--debug {
     border-color: purple;
     background-color: orchid;
+}
+
+.alert__title {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 32px;
+    margin: 0;
 }

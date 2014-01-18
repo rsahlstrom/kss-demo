@@ -35,24 +35,18 @@ require_once('../includes/header.php');
 
     <div class="styleguide__elements">
         <div class="styleguide__element">
-            <div class="alert">
-                Body
-            </div>
+            <?= $section->getMarkupNormal(); ?>
         </div>
         <?php foreach ($section->getModifiers() as $modifier) { ?>
             <div class="styleguide__element styleguide__element--modifier">
                 <span class="styleguide__element__modifier-label"><?= $modifier->getName(); ?></span>
-                <div class="alert <?= $modifier->getClassName(); ?>">
-                    Body
-                </div>
+                <?= $modifier->getExampleHtml(); ?>
             </div>
         <?php } ?>
     </div>
 
     <div class="styleguide__html">
-        <pre class="styleguide__code"><code>&lt;div class="alert $modifierClass"&gt;
-    Body
-&lt;/div&gt;</code></pre>
+        <pre class="styleguide__code"><code><?= htmlentities($section->getMarkupNormal('{class}')); ?></code></pre>
     </div>
 </div>
 
