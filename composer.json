@@ -1,0 +1,5 @@
+{
+    "require": {
+        "scan/kss-php": "~0.6"
+    }
+}

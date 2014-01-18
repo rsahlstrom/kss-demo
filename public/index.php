@@ -1,5 +1,12 @@
 <?php
-    require_once('../includes/header.php');
+
+require_once('../vendor/autoload.php');
+
+$kss = new \Scan\Kss\Parser('\css');
+$section = $kss->getSection('1.1');
+
+require_once('../includes/header.php');
+
 ?>
 
 <div class="styleguide">
@@ -8,7 +15,7 @@
     </h3>
 
     <div class="styleguide__description">
-        <p>These are boxes to help users see messages they need to pay attention to</p>
+        <p><?= $section->getDescription(); ?></p>
     </div>
 
     <div class="styleguide__elements">
@@ -17,18 +24,14 @@
                 Body
             </div>
         </div>
-        <div class="styleguide__element styleguide__element--modifier">
-            <span class="styleguide__element__modifier-label">.error</span>
-            <div class="alert alert--error">
-                Body
+        <?php foreach ($section->getModifiers() as $modifier) { ?>
+            <div class="styleguide__element styleguide__element--modifier">
+                <span class="styleguide__element__modifier-label"><?= $modifier->getName(); ?></span>
+                <div class="alert <?= $modifier->getClassName(); ?>">
+                    Body
+                </div>
             </div>
-        </div>
-        <div class="styleguide__element styleguide__element--modifier">
-            <span class="styleguide__element__modifier-label">.success</span>
-            <div class="alert alert--success">
-                Body
-            </div>
-        </div>
+        <?php } ?>
     </div>
 
     <div class="styleguide__html">
@@ -39,4 +42,4 @@
 </div>
 
 <?php
-    require_once('../includes/footer.php');
+require_once('../includes/footer.php');
