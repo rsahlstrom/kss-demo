@@ -1,8 +1,9 @@
 /*
 Display important information in a container that will catch the user's attention
 
-.alert--error
-.alert--success
+.alert--error - Use when a user does something dumb
+.alert--success - Use when a user does something right
+.alert--info - Use to give extra info to a user
 
 Styleguide 1.1
  */
@@ -23,4 +24,9 @@ Styleguide 1.1
 .alert--success {
     border-color: green;
     background-color: limegreen;
+}
+
+.alert--info {
+    border-color: blue;
+    background-color: cornflowerblue;
 }

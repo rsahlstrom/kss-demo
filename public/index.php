@@ -16,6 +16,21 @@ require_once('../includes/header.php');
 
     <div class="styleguide__description">
         <p><?= $section->getDescription(); ?></p>
+
+        <?php if (count($section->getModifiers()) > 0) { ?>
+            <ul class="styleguide__modifiers">
+                <?php foreach ($section->getModifiers() as $modifier) { ?>
+                    <li>
+                        <span class="styleguide__modifier-name">
+                            <?= $modifier->getName(); ?>
+                        </span>
+                        <?php if ($modifier->getDescription()) { ?>
+                            &mdash; <?= $modifier->getDescription(); ?>
+                        <?php } ?>
+                    </li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
     </div>
 
     <div class="styleguide__elements">
