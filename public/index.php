@@ -23,6 +23,12 @@
                 Body
             </div>
         </div>
+        <div class="styleguide__element styleguide__element--modifier">
+            <span class="styleguide__element__modifier-label">.success</span>
+            <div class="alert alert--success">
+                Body
+            </div>
+        </div>
     </div>
 
     <div class="styleguide__html">

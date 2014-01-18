@@ -11,3 +11,8 @@
     border-color: darkred;
     background-color: red;
 }
+
+.alert--success {
+    border-color: green;
+    background-color: limegreen;
+}
