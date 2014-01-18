@@ -1,0 +1,29 @@
+/*
+# Containers
+
+Styleguide 3
+*/
+
+/*
+# Example Container
+
+This is just to show you it works
+
+Markup:
+<div class="container $modifierClass">
+    Container class
+</div>
+
+.container--dashed
+
+Styleguide 3.1
+ */
+
+.container {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.container--dashed {
+    border-style: dashed;
+}
