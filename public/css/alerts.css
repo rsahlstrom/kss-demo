@@ -4,6 +4,7 @@ Display important information in a container that will catch the user's attentio
 .alert--error - Use when a user does something dumb
 .alert--success - Use when a user does something right
 .alert--info - Use to give extra info to a user
+.alert--debug - Debug information to display to a developer
 
 Styleguide 1.1
  */
@@ -29,4 +30,9 @@ Styleguide 1.1
 .alert--info {
     border-color: blue;
     background-color: cornflowerblue;
+}
+
+.alert--debug {
+    border-color: purple;
+    background-color: orchid;
 }
