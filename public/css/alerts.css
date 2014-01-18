@@ -1,4 +1,6 @@
 /*
+# Alerts
+
 Display important information in a container that will catch the user's attention
 
 Markup:
@@ -43,9 +45,34 @@ Styleguide 1.1
     background-color: orchid;
 }
 
+/*
+# Alert Titles
+
+These are titles to be used with alerts
+
+Markup:
+<div class="alert">
+    <h1 class="alert__title $modifierClass">Title of Alert</h1>
+    Body of Alert
+</div>
+
+.alert__title--mini
+.alert__title--plain
+
+Styleguide 1.2
+ */
+
 .alert__title {
     font-style: italic;
     font-weight: normal;
     font-size: 32px;
     margin: 0;
+}
+
+.alert__title--mini {
+    font-size: 18px;
+}
+
+.alert__title--plain {
+    font-style: normal;
 }
