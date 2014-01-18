@@ -17,10 +17,16 @@
                 Body
             </div>
         </div>
+        <div class="styleguide__element styleguide__element--modifier">
+            <span class="styleguide__element__modifier-label">.error</span>
+            <div class="alert alert--error">
+                Body
+            </div>
+        </div>
     </div>
 
     <div class="styleguide__html">
-        <pre class="styleguide__code"><code>&lt;div class="alert"&gt;
+        <pre class="styleguide__code"><code>&lt;div class="alert $modifierClass"&gt;
     Body
 &lt;/div&gt;</code></pre>
     </div>
