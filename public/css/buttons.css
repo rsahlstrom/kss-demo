@@ -1,0 +1,37 @@
+/*
+# Default Buttons
+
+We overwrote the button tag
+
+Markup:
+<button class="$modifierClass">
+    I'm a button
+</button>
+
+Styleguide 2.1
+*/
+
+button {
+    border: 2px outset gray;
+    background-color: dodgerblue;
+    color: orange;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button:hover,
+button:focus {
+    border-style: solid;
+    background-color: yellow;
+}
+
+button:active {
+    border-style: inset;
+}
+
+button:disabled {
+    border-style: solid;
+    background-color: gray;
+    cursor: default;
+}
